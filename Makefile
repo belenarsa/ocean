@@ -4,6 +4,13 @@ bin: main.o
 	gcc main.o -Wall -o is_armstrong_number -lm 
 main.o : main.c
 	gcc -c main.c -pedantic -Wall -o main.o
+stack.o: stack.c
+	gcc -c stack.c -pedantic -Wall -o obj/stack.o
+armstrong.o: armstrong.c
+	gcc -c armstrong.c -pedantic -Wall -o obj/armstrong.o
+
+objects: main.o stack.o armstrong.o
+
 clean: clean-doc clean-obj clean-bin
 	rm -f *.o is_armstrong_number 
 clean-obj:
