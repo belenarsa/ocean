@@ -5,6 +5,7 @@ pipeline {
             steps {
                     echo "A documentar!"
 		}
-	}
+		}
 
+	}
 }
