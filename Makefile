@@ -1,9 +1,8 @@
 all: bin 
-
-bin: main.o 
-	gcc main.o -Wall -o is_armstrong_number -lm 
+bin: objects
+	gcc obj/main.o obj/stack.o obj/armstrong.o -Wall -o bin/is_armstrong_number -lm
 main.o : main.c
-	gcc -c main.c -pedantic -Wall -o main.o
+	gcc -c main.c -pedantic -Wall -o obj/ main.o
 stack.o: stack.c
 	gcc -c stack.c -pedantic -Wall -o obj/stack.o
 armstrong.o: armstrong.c
