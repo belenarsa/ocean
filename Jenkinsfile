@@ -4,8 +4,7 @@ pipeline {
         stage('documentación') {
             steps {
                     echo "A documentar!"
-                  },
-                
-            }
+		}
 	}
+
 }
