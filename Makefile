@@ -12,6 +12,9 @@ clean-bin:
 	rm -f is_armstrong_number 
 clean-doc:
 	rm -rf html latex
+tests-xml: clean armstrong.o stack.o
+	gcc tests/armstrong/is_armstrong_number.c obj/armstrong.o obj/stack.o -lm -lcmocka -o tests/build/is_armstrong_number
+	CMOCKA_XML_FILE=reports/tests/%g.xml CMOCKA_MESSAGE_OUTPUT=xml ./tests/build/is_armstrong_number || true
 doc: clean-doc
 	doxygen	
 cppcheck-xml:
