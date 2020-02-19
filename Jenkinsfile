@@ -21,7 +21,7 @@ pipeline {
 }	
 	post {
 		always {
-			publishCppcheck pattern: 'report.xml'
+			publishCppcheck pattern: 'cppcheck.xml'
 			junit 'reports/tests/*.xml'
 	}
 	}	
