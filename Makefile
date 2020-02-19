@@ -14,7 +14,6 @@ clean-doc:
 	rm -rf html latex
 doc: clean-doc
 	doxygen	
-
 cppcheck-xml:
 	cppcheck --enable=all --inconclusive --xml --xml-version=2 . 2> cppcheck.xml 
 cppcheck:
