@@ -18,6 +18,11 @@ pipeline {
 		sh 'make cppcheck-xml'
 		}
 	}
+	stage('Tests') {
+            steps {
+                sh 'make tests-xml'
+            }
+	}
 }	
 	post {
 		always {
