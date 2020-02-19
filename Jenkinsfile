@@ -12,6 +12,11 @@ pipeline {
 
 		}
 	}
+	stage('CppCheck'){
+		steps {
+	sh 'make ccpcheck-xml'
+		}
+	}
 }
 }
 }
