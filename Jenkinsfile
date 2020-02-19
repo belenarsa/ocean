@@ -18,6 +18,7 @@ pipeline {
 		sh 'make cppcheck-xml'
 		}
 	}
+}	
 	post {
 		always {
 			publishCppcheck patern: 'report.xml'
@@ -25,5 +26,5 @@ pipeline {
 	}
 	}	
 
-}
+
 }
